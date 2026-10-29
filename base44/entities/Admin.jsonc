@@ -1,0 +1,50 @@
+{
+  "name": "Admin",
+  "type": "object",
+  "properties": {
+    "username": {
+      "type": "string"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "password_hash": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "username",
+    "first_name",
+    "last_name",
+    "email",
+    "password_hash"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

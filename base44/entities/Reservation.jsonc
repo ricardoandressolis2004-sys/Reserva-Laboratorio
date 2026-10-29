@@ -1,0 +1,75 @@
+{
+  "name": "Reservation",
+  "type": "object",
+  "properties": {
+    "reservation_date": {
+      "type": "string"
+    },
+    "block": {
+      "type": "number"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "practice": {
+      "type": "string"
+    },
+    "plc": {
+      "type": "string"
+    },
+    "mps": {
+      "type": "string"
+    },
+    "team_id": {
+      "type": "string"
+    },
+    "booker_matricula": {
+      "type": "string"
+    },
+    "booker_name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "cancelled",
+        "no_show",
+        "attended"
+      ],
+      "default": "active"
+    },
+    "sanctioned_at": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "reservation_date",
+    "block",
+    "subject",
+    "practice",
+    "team_id"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

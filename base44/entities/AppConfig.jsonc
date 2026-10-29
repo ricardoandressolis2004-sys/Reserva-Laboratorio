@@ -1,0 +1,56 @@
+{
+  "name": "AppConfig",
+  "type": "object",
+  "properties": {
+    "registration_enabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "registration_start": {
+      "type": "string"
+    },
+    "registration_end": {
+      "type": "string"
+    },
+    "teams_enabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "teams_start": {
+      "type": "string"
+    },
+    "teams_end": {
+      "type": "string"
+    },
+    "ip_restriction_enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "allowed_ips": {
+      "type": "string"
+    }
+  },
+  "required": [],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "name": "Team",
+  "type": "object",
+  "properties": {
+    "subject": {
+      "type": "string",
+      "enum": [
+        "Automatizaci\u00f3n",
+        "CNC",
+        "APM"
+      ]
+    },
+    "team_number": {
+      "type": "string"
+    },
+    "has_number": {
+      "type": "boolean",
+      "default": true
+    },
+    "members": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "owner_matricula": {
+      "type": "string"
+    },
+    "sanctioned_until": {
+      "type": "string"
+    },
+    "sanction_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "subject",
+    "members",
+    "owner_matricula"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
