@@ -103,3 +103,9 @@
     background-size: 44px 44px;
   }
 }
+#base44-edit-badge, .base44-badge, #base44-badge {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
